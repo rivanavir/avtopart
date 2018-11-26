@@ -26,7 +26,10 @@
             <span></span>
           </button>
           <div class="btn-wrap ml-auto mob-actions">
-            <a class="btn btn-warning" href="#">Войти</a>
+            <a class="btn btn-warning"
+              data-toggle="modal"
+              data-target="#logInModal"
+              href="#">Войти</a>
           </div>
         
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -67,8 +70,14 @@
               </li>
             </ul>
             <div class="btn-wrap ml-auto mobile-hide">
-              <a class="btn btn-warning" href="#">Войти</a>
-              <a class="btn btn-link" href="#">Регистрация</a>
+              <a class="btn btn-warning"
+                data-toggle="modal"
+                data-target="#logInModal"
+                href="#">Войти</a>
+              <a class="btn btn-link"
+                data-toggle="modal"
+                data-target="#registrationModal"
+                href="#">Регистрация</a>
             </div>
           </div>
         </nav>
@@ -312,8 +321,14 @@
             <img src="./assets/image/logo-white.png" alt="logo">
           </a>
           <div class="btn-wrap ml-auto mobile-show">
-            <a class="btn btn-warning" href="#">Войти</a>
-            <a class="btn btn-link" href="#">Регистрация</a>
+            <a class="btn btn-warning"
+              data-toggle="modal"
+              data-target="#logInModal"
+              href="#">Войти</a>
+            <a class="btn btn-link"
+              data-toggle="modal"
+              data-target="#registrationModal"
+              href="#">Регистрация</a>
           </div>
         </div>
         <div class="col-sm-6 col-md-5 col-9 ml-auto mr-auto">
@@ -349,8 +364,14 @@
             <li><a href="#">EN</a></li>
           </ul>
           <div class="btn-wrap mobile-hide">
-            <a class="btn btn-warning" href="#">Войти</a>
-            <a class="btn btn-link" href="#">Регистрация</a>
+            <a class="btn btn-warning"
+              data-toggle="modal"
+              data-target="#logInModal"
+              href="#">Войти</a>
+            <a class="btn btn-link"
+              data-toggle="modal"
+              data-target="#registrationModal"
+              href="#">Регистрация</a>
           </div>
         </div>
       </div>
@@ -364,6 +385,118 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="logInModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered logIn-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-content-inner">
+          <div class="modal-header">
+            <h5 class="modal-title">Войдите</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="modal-form">
+              <div class="form-group">
+                <i class="fas fa-envelope"></i>
+                <label>Почта</label>
+                <input type="email" class="form-control" id="" placeholder="Почта">
+              </div>
+              <div class="form-group">
+                <i class="fas fa-lock"></i>
+                <label>&nbsp;</label>
+                <input type="password" class="form-control" id="" placeholder="Пароль">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning">Войти</button>
+          </div>
+        </div>
+        <div class="modal-content-inner right-side">
+          <div class="modal-header">
+            <h5 class="modal-title">Еще нет аккаунта?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white">Стать участником</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered registration-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Зарегистрируйтесь</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="modal-form">
+            <div class="form-group form-check">
+              <input class="form-check-input" type="checkbox" value="" id="formSwitcher">
+              <label class="form-check-label first">Физ.лицо</label>
+              <label class="form-check-label check-switcher" for="formSwitcher"></label>
+              <label class="form-check-label last">Юр.лицо</label>
+            </div>
+            <div class="form-group">
+              <i class="fas fa-id-card"></i>
+              <label>ЕДРПО</label>
+              <input type="text" class="form-control" id="" placeholder="8375673">
+            </div>
+            <div class="form-group">
+              <i class="fas fa-user"></i>
+              <label>&nbsp;</label>
+              <input type="text" class="form-control" id="" placeholder="Фамилия Имя Отчество">
+            </div>
+            <div class="form-group">
+              <i class="far fa-credit-card"></i>
+              <label>&nbsp;</label>
+              <input type="text" class="form-control" id="" placeholder="Идентификационный код">
+            </div>
+            <div class="form-group">
+              <i class="fas fa-envelope"></i>
+              <label>&nbsp;</label>
+              <input type="email" class="form-control" id="" placeholder="Почта">
+            </div>
+            <div class="form-group">
+              <i class="fas fa-mobile-alt"></i>
+              <label>&nbsp;</label>
+              <input type="text" class="form-control" id="" placeholder="Телефон">
+            </div>
+            <div class="form-group">
+              <i class="fas fa-map-marker-alt"></i>
+              <label>&nbsp;</label>
+              <input type="text" class="form-control" id="" placeholder="Адрес">
+            </div>
+            <div class="form-group">
+              <i class="fas fa-lock"></i>
+              <label>&nbsp;</label>
+              <input type="password" class="form-control" id="" placeholder="Пароль">
+            </div>
+            <div class="form-group">
+              <i class="fas fa-lock"></i>
+              <label>&nbsp;</label>
+              <input type="password" class="form-control" id="" placeholder="Пароль">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning">Создать аккаунт</button>
+        </div>
+      </div>
+    </div>
+  </div>
   
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
