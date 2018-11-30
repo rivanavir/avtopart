@@ -38,16 +38,27 @@ body.backdroped{
   &:not(.homepage){
     margin-bottom: -190px;
     padding-bottom: 190px;
-    background: #ececec url(../image/bg-grey-pattern.png) top center repeat;
+    background: #ececec;
+    // background: #ececec url(../image/bg-grey-pattern.png) top center repeat;
+    .main-content{
+      .container{
+        max-width: 992px !important;
+        @media(max-width:992px){
+          max-width: 730px !important;
+        }
+      }
+    }
   }
   .navbar-brand{
+    margin-right: 3%;
     img.white-logo{
       display: none;
     }
   }
   &.homepage{
-    background: url(../image/bg-pattern.png) top center repeat, url(../image/home-bg.jpg) top center no-repeat;
-    background-size: auto, cover;
+    background: url(../image/home-bg.jpg) top center no-repeat;
+    // background: url(../image/bg-pattern.png) top center repeat, url(../image/home-bg.jpg) top center no-repeat;
+    background-size: cover;
     min-height: 100%;
     .navbar-brand{
       img.white-logo{
@@ -60,12 +71,18 @@ body.backdroped{
 
     .main-content{
       padding: 30px 0;
+      .container{
+        max-width: 1030px !important;
+        @media(max-width:992px){
+          max-width: 495px !important;
+        }
+      }
     }
 
     .left-txt{
       position: relative;
       @media(min-width: 992px){
-        padding-right: 100px;
+        padding-right: 45px;
       }
       i.fas{
         font-size: 22px;
@@ -139,11 +156,19 @@ body.backdroped{
       margin-bottom: 0;
     }
     .home-main-img{
-      @media(max-width: 992px){
+      text-align: right;
+      @media (min-width: 768px) and (max-width: 992px){
         margin-top: -80px;
       }
       @media(max-width: 768px){
-        display: none;
+        // display: none;
+        padding-top: 30px;
+        text-align: center;
+      }
+      >img{
+        @media(max-width: 992px){
+          width: 254px;
+        }
       }
     }
   }
@@ -331,6 +356,11 @@ header.header{
         }
       }    
     }
+    .desk-actions{
+      .btn{
+        padding: 9px;
+      }
+    }
   }
   ul.navbar-nav{
     @media(min-width: 992px){
@@ -496,6 +526,9 @@ header.header{
     }
     >img{
       max-width: 100%;
+      @media(max-width:992px){
+        width: 230px;
+      }
       @media(max-width:768px){
         width: 190px;
       }

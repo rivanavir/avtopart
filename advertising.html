@@ -17,26 +17,35 @@
       <div class="part-container">
         <nav class="navbar navbar-expand-lg">
           <a class="navbar-brand" href="/">
-            <img class="white-logo" src="./assets/image/logo-white.jpg" alt="logo">
-            <img class="regular-logo" src="./assets/image/logo.jpg" alt="logo">
+            <img class="white-logo" src="./assets/image/logo-white.png" alt="logo">
+            <img class="regular-logo" src="./assets/image/logo.png" alt="logo">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
+          <div class="btn-wrap ml-auto mob-actions">
+            <a class="btn btn-warning"
+              data-toggle="modal"
+              data-target="#logInModal"
+              href="#">Войти</a>
+          </div>
         
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Автомагазин-терминал<br>бизнес под ключ</a>
+                <a class="nav-link" href="#">Автомагазин-терминал<br> бизнес под ключ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">EK4CAR - все<br>для транспорта</a>
+                <a class="nav-link" href="#">EK4CAR - все<br> для транспорта</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Размещение<br>рекламы</a>
+                <a class="nav-link" href="#">Размещение<br> рекламы</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Размещение<br>обьявлений</a>
+                <a class="nav-link" href="#">Размещение<br> обьявлений</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Сотрудничество</a>
@@ -60,9 +69,15 @@
                 </div>
               </li>
             </ul>
-            <div class="btn-wrap ml-auto">
-              <a class="btn btn-warning" href="#">Войти</a>
-              <a class="btn btn-link" href="#">Регистрация</a>
+            <div class="btn-wrap ml-auto mobile-hide">
+              <a class="btn btn-warning"
+                data-toggle="modal"
+                data-target="#logInModal"
+                href="#">Войти</a>
+              <a class="btn btn-link"
+                data-toggle="modal"
+                data-target="#registrationModal"
+                href="#">Регистрация</a>
             </div>
           </div>
         </nav>
@@ -149,5 +164,6 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
