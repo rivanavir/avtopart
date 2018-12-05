@@ -35,10 +35,9 @@ body.backdroped{
 // main wrapper style{
 .main-wrapper{
   min-height: 100%;
-  &:not(.homepage){
+  &:not(.homepage):not(.log-block){
     margin-bottom: -190px;
     padding-bottom: 190px;
-    background: #ececec;
     // background: #ececec url(../image/bg-grey-pattern.png) top center repeat;
     .main-content{
       .container{
@@ -48,6 +47,9 @@ body.backdroped{
         }
       }
     }
+  }
+  &.log-block{
+    background: #ececec;
   }
   .navbar-brand{
     margin-right: 3%;
@@ -1112,54 +1114,63 @@ footer.footer{
   }
 }
 
-// modal style
-.modal-dialog{
-  &.registration-dialog{
-    max-width: 430px;
+// registration style
+.access-block{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .registration-block{
+    width: 430px;
+    background: #fff;
     @media(max-width: 576px){
-      max-width: 300px;
+      width: 300px;
+    }
+    .block-content{
+      flex-direction: column;
     }
   }
-  &.logIn-dialog{
-    max-width: 640px;
+  .logIn-block{
+    width: 640px;
+    background: #fff;
+    max-width: 100%;
     @media(max-width: 576px){
-      max-width: 300px;
+      width: 300px;
     }
-    .modal-content{
+    .block-content{
+      flex-direction: column;
       @media(min-width: 576px){
         flex-direction: row;
       }
     }
   }
-  .modal-content{
+  .block-content{
     border: 0;
     border-radius: 0;
-    .modal-header{
+    display: flex;
+    .block-header{
       border-bottom: 0;
       padding: 30px 85px;
       position: relative;
       @media(max-width: 576px){
         padding: 15px 25px;
       }
-      h5.modal-title{
+      h5.block-title{
         font-family: "Play";
         font-size: 24px;
         color: #0f0d13;
         margin: 0 auto;
-      }
-      .close{
-        position: absolute;
-        margin: 0;
-        right: 0;
-        top: 0;
+        text-align: center;
       }
     }
-    .modal-body{
+    .block-body{
       padding: 10px 85px 0;
       @media(max-width: 576px){
         padding: 0 25px;
       }
-      .modal-form{
+      .block-form{
         .form-group{
           margin-bottom: 5px;
           position: relative;
@@ -1259,7 +1270,7 @@ footer.footer{
         }
       }
     }
-    .modal-footer{
+    .block-footer{
       padding: 50px 85px;
       border-top: 0;
       @media(max-width: 576px){
@@ -1276,31 +1287,26 @@ footer.footer{
         height: 32px;
       }
     }
-    .modal-content-inner{
+    .block-content-inner{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       @media(min-width: 576px){
         min-width: 50%;
       }
-      .modal-header{
+      .block-header{
         padding: 25px 20px 25px 40px;
         @media(max-width: 576px){
           padding: 15px 25px;
         }
-        .close{
-          @media(min-width: 576px){
-            display: none;
-          }
-        }
       }
-      .modal-body{
+      .block-body{
         padding: 10px 20px 0 40px;
         @media(max-width: 576px){
           padding: 0 25px;
         }
       }
-      .modal-footer{
+      .block-footer{
         padding: 50px 20px 50px 40px;
         @media(max-width: 576px){
           padding: 30px 25px 25px;
@@ -1308,22 +1314,15 @@ footer.footer{
       }
       &.right-side{
         background: #422579;
-        .modal-header{
+        .block-header{
           @media(min-width: 576px){
             padding: 25px 40px 25px 20px;
           }
-          h5.modal-title{
+          h5.block-title{
             color: white;
-          }
-          .close{
-            color: white;
-            text-shadow: none;
-            @media(max-width: 576px){
-              display: none;
-            }
           }
         }
-        .modal-body{
+        .block-body{
           @media(min-width: 576px){
             padding: 10px 40px 0 20px;
           }
@@ -1334,7 +1333,7 @@ footer.footer{
             line-height: 1.429;
           }
         }
-        .modal-footer{
+        .block-footer{
           @media(min-width: 576px){
             padding: 50px 40px 50px 20px;
           }
