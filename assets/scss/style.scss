@@ -1164,6 +1164,8 @@ footer.footer{
           margin-bottom: 5px;
           position: relative;
           padding-left: 25px;
+          height: 40px;
+          padding-top: 14px;
           i[class^=fa]{
             position: absolute;
             color: #d6d6d6;
@@ -1174,7 +1176,14 @@ footer.footer{
           }
           label:not(.form-check-label){
             margin-bottom: 0;
-            color: $main_color;
+            // color: $main_color;
+            position: absolute;
+            font-size: 14px;
+            color: #0f0d13;
+            left: 25px;
+            top: 16px;
+            z-index: 1;
+            transition: all .2s ease;
           }
           input.form-control{
             border-radius: 0;
@@ -1182,10 +1191,17 @@ footer.footer{
             border-bottom-color: #422579;
             padding: 0;
             height: auto;
+            background: transparent;
+            position: relative;
+            z-index: 5;
             &:focus{
               border-bottom-color: $main_color;
               outline: none;
               box-shadow: 0 0 0 transparent;
+              + label:not(.form-check-label){
+                top: 0;
+                color: $main_color;
+              }
             }
           }
           &.form-check{
